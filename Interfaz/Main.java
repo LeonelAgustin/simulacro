@@ -44,27 +44,7 @@ public class Main {
 				switch (b) {
 				case 1:// DETENERSE
 					
-					
-					String parada = JOptionPane.showInputDialog("En que parada quiere detenerse:\nA B C D E F G H I J");
-					
-					if (parada.equalsIgnoreCase("J")) {
-						JOptionPane.showMessageDialog(null, "Final del recorrido\nrecaudacion del viaje: "+colectivo.getRecaudacion());
-						terminado = true;
-					}
-					
-					int paradaActual = paradas.indexOf(parada);
-					int suben = Integer.parseInt(JOptionPane.showInputDialog("cuantas personas van a subir?"));
-					
-					if (suben <= 50 && suben <= (50 - pasajeros.size())) {
-						for (int i = 0; i < suben; i++) {
-							
-							pasajeros = colectivo.cobrar(paradas,i,pasajeros,parada);
-											
-						}
-					} else {
-						
-						JOptionPane.showMessageDialog(null, "No hay lugar, solo quedan "+(50-pasajeros.size())+" lugares disponibles, puede esperar otro colectivo si quiere");
-					}		
+					pasajeros = colectivo.detenerse(paradas, pasajeros);		
 					break;
 
 				case 2:// VER LISTA

@@ -3,13 +3,13 @@ package Datos;
 public class Pasajero {
 	private int id;
 	private String nombre;
-	private char letra_destino;
+	private String letra_destino;
 	private boolean bajar;
 	private int edad;
 	private double saldo;	
 	
 	
-	public Pasajero(int id, String nombre, char letra_destino, boolean bajar, int edad, int saldo) {
+	public Pasajero(int id, String nombre, String letra_destino, boolean bajar, int edad, int saldo) {
 		super();
 		this.id = id;
 		this.nombre = nombre;
@@ -30,10 +30,10 @@ public class Pasajero {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	public char getLetra_destno() {
+	public String getLetra_destno() {
 		return letra_destino;
 	}
-	public void setLetra_destno(char letra_destno) {
+	public void setLetra_destno(String letra_destno) {
 		this.letra_destino = letra_destno;
 	}
 	public boolean isBajar() {
@@ -58,6 +58,10 @@ public class Pasajero {
 	public String toString() {
 		return "Pasajero [id=" + id + ", nombre=" + nombre + ", letra_destno=" + letra_destino + ", bajar=" + bajar
 				+ ", edad=" + edad + ", saldo=" + saldo + "]";
+	}
+	
+	public void cobrarse() {
+		
 	}
 	
 }
